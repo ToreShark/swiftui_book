@@ -82,7 +82,7 @@ struct Home: View {
     }
     
     func fetchBooks() {
-        guard let url = URL(string: "http://localhost:3000/books") else { return }
+        guard let url = URL(string: "https://work-418514.nw.r.appspot.com/books") else { return }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else { return }
@@ -105,7 +105,7 @@ struct Home: View {
         return
     }
 
-    let url = URL(string: "http://localhost:3000/books/\(bookToDelete.id)")!
+    let url = URL(string: "https://work-418514.nw.r.appspot.com/books/\(bookToDelete.id)")!
 
     var request = URLRequest(url: url)
     request.httpMethod = "DELETE"

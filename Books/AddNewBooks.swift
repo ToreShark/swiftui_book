@@ -41,7 +41,7 @@ struct AddNewBooks: View {
 
         let bookData = ["title": title, "author": author, "yearOfPublication": year] as [String: Any]
 
-        let url = URL(string: "http://localhost:3000/books")!
+        let url = URL(string: "https://work-418514.nw.r.appspot.com/books")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

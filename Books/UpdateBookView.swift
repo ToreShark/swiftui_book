@@ -40,7 +40,7 @@ struct UpdateBookView: View {
         }
 
     func updateBook() {
-        guard let book = book, let url = URL(string: "http://localhost:3000/books/\(book.id)") else {
+        guard let book = book, let url = URL(string: "https://work-418514.nw.r.appspot.com/books/\(book.id)") else {
                     print("Invalid URL or book data")
                     return
                 }
